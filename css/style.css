@@ -88,6 +88,9 @@ input {
 
 @media (max-width:688px) {
     .calc-body{
-        width: 80%;
+        width: 85%;
+    }
+    input{
+      width: 85%;
     }
 }
