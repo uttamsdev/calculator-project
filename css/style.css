@@ -1,84 +1,87 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Comic+Neue:ital,wght@0,400;0,700;1,700&family=Inter:wght@400;500;600;700&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:wght@400;700&family=Mulish:wght@300;400&family=Open+Sans:wght@400;600&family=Poppins:wght@400;500&family=Roboto:wght@400;500&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
-    background-color: #DEE1E8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body {
+  background-color: #dee1e8;
 }
-.calc-body{
-    width: 380px;
-    height: 540px;
-    background-color: #DEE1E8;
-    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
-    -6px -6px 10px rgba(255, 255, 255, .5),
-    6px 6px 8px rgba(255, 255, 255, .075),
-    6px 6px 10px rgba(0, 0, 0, .15);
-    border-radius: 5px;
+.calc-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.calc-body {
+  width: 380px;
+  height: 540px;
+  background-color: #dee1e8;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+    -6px -6px 10px rgba(255, 255, 255, 0.5),
+    6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+.key-pad {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+.key-pad div:nth-child(17) {
+  grid-column: 2;
+}
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #dee1e8;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6),
+    -2px -2px 4px rgba(255, 255, 255, 0.4),
+    2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  cursor: pointer;
 }
-.key-pad{
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    place-items: center;
+.btn-zero {
+  width: 150px;
+  height: 60px;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6),
+    -2px -2px 4px rgba(255, 255, 255, 0.4),
+    2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -66px;
+  margin-top: 17px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
 }
-.key-pad div:nth-child(17){
-    grid-column: 2;
+input {
+  background-color: #dee1e8;
+  outline: none;
+  border: none;
+  height: 80px;
+  width: 350px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+  border-radius: 5px;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.7),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 2px rgba(255, 255, 255, 0.075),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.15);
+  padding: 5px 18px;
+  font-size: 25px;
+  text-align: right;
 }
-
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 17px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #DEE1E8;
-    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
-    -2px -2px 4px rgba(255, 255, 255, .4),
-    2px 2px 2px rgba(255, 255, 255, .05),
-    2px 2px 4px rgba(0, 0, 0, .1);
-    font-size: 20px;
-    cursor: pointer;
-}
-.btn-zero{
-    width: 150px;
-    height: 60px;
-    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
-    -2px -2px 4px rgba(255, 255, 255, .4),
-    2px 2px 2px rgba(255, 255, 255, .05),
-    2px 2px 4px rgba(0, 0, 0, .1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -66px;
-    margin-top: 17px;
-    border-radius: 8px;
-    font-size: 20px;
-
-}
-input{
-    background-color: #DEE1E8;
-    outline: none;
-    border: none;
-    height: 80px;
-    width: 350px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 25px;
-    border-radius: 5px;
-    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
-    inset -2px -2px 4px rgba(255, 255, 255, .5),
-    inset 2px 2px 2px rgba(255, 255, 255, .075),
-    inset 2px 2px 4px rgba(0, 0, 0, .15);
-}
-.color{
-    color: crimson;
+.color {
+  color: crimson;
 }
