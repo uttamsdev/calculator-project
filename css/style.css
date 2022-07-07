@@ -68,7 +68,7 @@ input {
   background-color: #dee1e8;
   outline: none;
   border: none;
-  height: 80px;
+  height: 90px;
   width: 350px;
   display: block;
   margin: 0 auto;
@@ -84,4 +84,10 @@ input {
 }
 .color {
   color: crimson;
+}
+
+@media (max-width:688px) {
+    .calc-body{
+        width: 90%;
+    }
 }
